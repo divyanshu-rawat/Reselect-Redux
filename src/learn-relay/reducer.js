@@ -6,8 +6,7 @@ import {fromJS} from 'immutable';
 import {createSelector} from 'reselect';
 
 
-const data = fromJS({
-goods: [
+const data = [
  {
   name: 'tomatoes',
   price: 3,
@@ -24,18 +23,18 @@ goods: [
   name: 'salad',
   price: 1,
  }
-],
-sorted: false,
-});
+]
 
 const initialState = ({
-	goods: data.goods,
+	goods: data,
 	sorted: false,
 	count: 0,
 });
 
 
 const Reducer = (state = initialState, action) => {
+
+  console.log('bhaiya',initialState)
 
     switch (action.type) {
      case SET_SORTED: {
@@ -47,6 +46,7 @@ const Reducer = (state = initialState, action) => {
      }
 
      default: {
+      console.log('yaha hu');
        return initialState;
      }
    }

@@ -1,10 +1,11 @@
 
 
-import {createSelector} from 'reselect';
+import {createSelector,get,getIn} from 'reselect';
 
-const getList = (state) => state.getIn(['main', 'goods']);
-const getSorted = (state) => state.getIn(['main', 'sorted']);
+const getList = (state) => state['goods'];
+const getSorted = (state) => state['sorted'];
 
+// export const getState = state => state[NAME];
 
 export const getGoods = createSelector( getList, getSorted,
 

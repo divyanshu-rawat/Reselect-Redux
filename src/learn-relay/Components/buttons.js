@@ -3,6 +3,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { setSorted } from '../actions';
+
 class Buttons extends React.Component {
 	render () {
 	 return (
@@ -18,4 +22,11 @@ class Buttons extends React.Component {
 	}
 }
 
-export default Buttons;
+const mapStateToProps = (state) => {
+	return {}
+}
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({ setSorted }, dispatch);
+const container = connect(mapStateToProps, mapDispatchToProps)(Buttons);
+
+export default container;

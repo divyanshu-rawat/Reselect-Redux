@@ -6,7 +6,7 @@ import Buttons   from './learn-relay/Components/buttons';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="">
          <div>
           <GoodsList/>
           <Buttons/>

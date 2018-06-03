@@ -6,19 +6,14 @@ import { count } from '../actions';
 
 
 const mapStateToProps = (state) => {
+
+	console.log('mere pass',state);
  return {
  	goods: getGoods(state),
   }
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({ count },dispatch);
-export default connect(mapStateToProps, mapDispatchToProps)(GoodsList);
+const container = connect(mapStateToProps, mapDispatchToProps)(GoodsList);
 
-
-// function mapStateToProps = () =>{
-// 	return getGoods(state);
-// }
-
-// function mapDispatchToProps = (dispatch) => {
-// 	return bindActionCreators( { count }, dispatch);
-// }
+export default container;
