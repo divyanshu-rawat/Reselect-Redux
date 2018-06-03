@@ -1,10 +1,12 @@
 
 
+
 import {SET_GOODS, SET_SORTED, COUNT} from './constants';
 import {fromJS} from 'immutable';
+import {createSelector} from 'reselect';
 
 
-const initialState = fromJS({
+const data = fromJS({
 goods: [
  {
   name: 'tomatoes',
@@ -26,15 +28,33 @@ goods: [
 sorted: false,
 });
 
+const initialState = ({
+	goods: data.goods,
+	sorted: false,
+	count: 0,
+});
 
-export default GoodsReducer = (state = initialState, action) => {
 
-	switch(ation.type){
-		
-		case SET_SORTED:
-			 // return state.set('sorted', action.sorted);
-		
-		default:
-			return initialState;
-	}
+const Reducer = (state = initialState, action) => {
+
+    switch (action.type) {
+     case SET_SORTED: {
+       return state.set('sorted', action.sorted);
+     }
+
+     case COUNT: {
+       return state.set('count', state.get('count') + 1);
+     }
+
+     default: {
+       return initialState;
+     }
+   }
 }
+
+export default Reducer;
+
+// https://hackernoon.com/usage-of-reselect-in-a-react-redux-application-fcdca05cc00d
+
+// state.set('sorted',action.sorted);
+// state.set('count', state.get(count) + 1)

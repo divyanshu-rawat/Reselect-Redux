@@ -1,19 +1,14 @@
 
 
 // import * as actions from './actions';
-// import * as components from './components';
+import * as components from './Components';
 // import * as constants from './constants';
-// import * as containers from './containers';
+import * as containers from './Containers';
 // import reducer from './reducer';
 // import * as selectors from './selectors';
 // import * as sagas from './sagas';
 
-// export default {
-//     actions,
-//     components, 
-//     containers,
-//     constants,
-//     reducer, 
-//     selectors,
-//     sagas
-// };
+export default {
+    components, 
+    containers
+};

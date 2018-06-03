@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+import GoodsList from './learn-relay/Components/goodslist';
+import Buttons   from './learn-relay/Components/buttons'; 
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Reselect App</h1>
+         <div>
+          <GoodsList/>
+          <Buttons/>
+         </div>
       </div>
     );
   }
