@@ -1,1 +1,1 @@
-A reduc-reselect project.
+A redux-reselect project.
