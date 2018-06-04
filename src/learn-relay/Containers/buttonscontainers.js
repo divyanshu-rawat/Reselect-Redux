@@ -11,6 +11,6 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({ setSorted }, dispatch);
-const container = connect(mapStateToProps, mapDispatchToProps)(Buttons);
+export default connect(mapStateToProps, mapDispatchToProps)(Buttons);
 
-export default container;
+

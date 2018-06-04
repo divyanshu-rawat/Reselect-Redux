@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDom from 'react-dom';
-
+// import buttoncontainer from '../Containers/buttoncontainers';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setSorted } from '../actions';
@@ -22,11 +22,11 @@ class Buttons extends React.Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {}
-}
+// const mapStateToProps = (state) => {
+// 	return {}
+// }
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ setSorted }, dispatch);
-const container = connect(mapStateToProps, mapDispatchToProps)(Buttons);
+// const mapDispatchToProps = (dispatch) => bindActionCreators({ setSorted }, dispatch);
+// export default connect(mapStateToProps, mapDispatchToProps)(Buttons);
 
-export default container;
+export default Buttons;

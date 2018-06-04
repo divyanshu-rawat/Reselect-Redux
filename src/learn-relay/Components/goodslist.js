@@ -14,8 +14,11 @@ class GoodsList extends React.Component {
 
 	constructor(props){
 		super(props);
-
 		console.log('goods',this);
+	}
+
+	componentDidMount(){
+		console.log('mounting', this);
 	}
 
 	componentWillReceiveProps(nextProps){
@@ -44,3 +47,5 @@ const mapDispatchToProps = (dispatch) => bindActionCreators({ count },dispatch);
 const container = connect(mapStateToProps, mapDispatchToProps)(GoodsList);
 
 export default container;
+
+// export default GoodsList;

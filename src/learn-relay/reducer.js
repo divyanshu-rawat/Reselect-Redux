@@ -34,19 +34,19 @@ const initialState = ({
 
 const Reducer = (state = initialState, action) => {
 
-  console.log('bhaiya',initialState)
+  console.log(action);
 
     switch (action.type) {
      case SET_SORTED: {
-       return state.set('sorted', action.sorted);
+      console.log(Object.assign({}, state, { sorted: action.sorted }));
+       return Object.assign({}, state, { sorted: action.sorted });
      }
 
      case COUNT: {
-       return state.set('count', state.get('count') + 1);
+       return Object.assign({}, state, { count: state.count + 1 });
      }
 
      default: {
-      console.log('yaha hu');
        return initialState;
      }
    }
