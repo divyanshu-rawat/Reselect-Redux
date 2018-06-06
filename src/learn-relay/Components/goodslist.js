@@ -6,7 +6,7 @@ import ReactDom from 'react-dom';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { count } from '../actions'; 
+import { count } from '../actions';
 import {getGoods} from '../selectors';
 
 
@@ -37,15 +37,15 @@ class GoodsList extends React.Component {
 	}
 }
 
-const mapStateToProps = (state) => {
- return {
- 	goods: getGoods(state),
-  }
-}
+// const mapStateToProps = (state) => {
+//  return {
+//  	goods: getGoods(state),
+//   }
+// }
 
-const mapDispatchToProps = (dispatch) => bindActionCreators({ count },dispatch);
-const container = connect(mapStateToProps, mapDispatchToProps)(GoodsList);
+// const mapDispatchToProps = (dispatch) => bindActionCreators({ count },dispatch);
+// const container = connect(mapStateToProps, mapDispatchToProps)(GoodsList);
 
-export default container;
+// export default container;
 
-// export default GoodsList;
+export default GoodsList;

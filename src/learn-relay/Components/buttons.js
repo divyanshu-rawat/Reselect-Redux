@@ -22,11 +22,6 @@ class Buttons extends React.Component {
 	}
 }
 
-// const mapStateToProps = (state) => {
-// 	return {}
-// }
 
-// const mapDispatchToProps = (dispatch) => bindActionCreators({ setSorted }, dispatch);
-// export default connect(mapStateToProps, mapDispatchToProps)(Buttons);
 
 export default Buttons;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import GoodsList from './learn-relay/Components/goodslist';
-import Buttons   from './learn-relay/Components/buttons'; 
+import GoodsList from './learn-relay/Containers/goodslistscontainer';
+import Buttons   from './learn-relay/Containers/buttonscontainers';
 
 class App extends Component {
   render() {
@@ -29,4 +29,4 @@ export default App;
 // when you use the createSelector() function,
 // it memiozes an output of every input selector and recalculates the resulting value only if any of the input selectors changes its output.
 
-// After mapStateToProps() yields recalculated props, the new props are shallow compared to the old ones and if they differ, component gets rerendered. 
+// After mapStateToProps() yields recalculated props, the new props are shallow compared to the old ones and if they differ, component gets rerendered.
